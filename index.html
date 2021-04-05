@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<meta charset="UTF-8" />
+	<title>Landing</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js' ></script>
+    <script type="text/javascript" src="script/script.js" defer></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet'/>
+    <link type="text/css" href="styles/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id='landingmap'></div>
+    <div id='informationmap'>
+        <p id="informationlegend">Click on a location to get coordinates!</p>
+    </div>
+    
+    <form id="form" onsubmit="return false;">
+        <label for="lat">Latitude:</label>
+        <input type="text" id="lat" />
+        <label for="lng">Longitude:</label>
+        <input type="text" id="lng" />
+        <input type="submit" onclick="othername();" />
+    </form>
+    
+    <h1 id="onwater">Is this on the water?</h1>
+</body>
+</html>
