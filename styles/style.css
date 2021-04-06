@@ -1,13 +1,14 @@
 body {
     margin: 0;
+    height: auto;
 }
 nav {
     background-color: black;
     background-color: rgba(0, 0, 0, 0.5);
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 #logospacex {
-    width: 300px;
+    width: 200px;
     height: auto;
 }
 #container {
@@ -17,10 +18,40 @@ nav {
     align-items: center;
 }
 #landingmap {
-    width: 50vw;
-    height: 50vh;
+    width: 90vw;
+    height: 400px;
     
 }
 .box {
     text-align: center;
 }
+/*
+@media screen and (min-width: 768px) {
+    .container {
+        width: 80%;
+        margin-top: 40px;   
+        margin-bottom: 40px;
+    }
+    #spacexlogo {
+        width: 30%;
+    }
+}
+
+ small screens 
+@media screen and (min-width: 1024px) {
+    .container {
+        width: 60%;
+        margin-top: 60px;   
+        margin-bottom: 60px;
+    }
+}
+
+ large screens 
+@media screen and (min-width: 1824px) {
+    .container {
+        width: 40%;
+        margin-top: 80px;   
+        margin-bottom: 80px;
+    }
+}
+*/
