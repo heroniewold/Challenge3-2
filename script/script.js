@@ -4,7 +4,8 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiaGVyb25pZXdvbGQiLCJhIjoiY2tta21heDYxMTIwNzJ2c
 // Get map
 var map = new mapboxgl.Map ({
     container: 'landingmap',
-    style: 'mapbox://styles/mapbox/streets-v11',
+    //style: 'mapbox://styles/mapbox/satellite-v9',
+    style: 'mapbox://styles/heroniewold/ckn5t8yzn0vjq17mzxktesk7l',
     center: [4.648403547169576, 52.05517378028636], 
     zoom: 10
 });
@@ -15,8 +16,8 @@ map.on('style.load', function() {
         var coordinates = e.lngLat;
         new mapboxgl.Popup()
             .setLngLat(coordinates)
-            .setHTML('Pizza')
-           // .setHTML('Possible landing place coordinates: <br/>' + 'Latitude' + ' ' + '\"' + coordinates.lat + '\" <br/>' + 'Longitude' + ' ' + '\"' + coordinates.lng + '\"')
+            //.setHTML('Pizza')
+            .setHTML('Possible landing place coordinates: <br/>' + 'Latitude' + ' ' + '\"' + coordinates.lat + '\" <br/>' + 'Longitude' + ' ' + '\"' + coordinates.lng + '\"')
             .addTo(map);
         
         // code to make text show under map
@@ -41,16 +42,18 @@ map.on('style.load', function() {
 });
 
 var nasaapod = 'https://api.nasa.gov/planetary/apod?api_key=5cwcboc56Nc7mkgzfRKbCF2CUSvSS8EKEcejN2b3';
-
-
-
 fetch(nasaapod)
-    
         .then(function(response) {
             return response.json();
         })
-    
         .then(function(response) {
             console.log(response);
-            document.body.style.backgroundImage = response.url;
+            var img = response.url;
+            console.log(img);
+            var url = "url('" + img + "')";
+            console.log(url);
+            document.body.style.backgroundImage = url;
+            document.body.style.backgroundRepeat = "no-repeat";
+            document.body.style.backgroundSize = "cover";
         })
+
