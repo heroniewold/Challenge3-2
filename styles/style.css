@@ -1,6 +1,11 @@
+@font-face {
+   font-family: Titillium; 
+   src: url('../font/TitilliumWeb-Regular.ttf');
+} 
 body {
     margin: 0;
     height: auto;
+    font-family: "Titillium";
 }
 nav {
     background-color: black;
@@ -14,8 +19,9 @@ nav {
 #container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    
     align-items: center;
+    height: 100vh;   
 }
 #landingmap {
     width: 90vw;
@@ -24,6 +30,18 @@ nav {
 }
 .box {
     text-align: center;
+    
+}
+h1 {
+    text-shadow:
+        0.05em 0 #FCFFDB,
+        0 0.05em #FCFFDB,
+        -0.05em 0 #FCFFDB,
+        0 -0.05em #FCFFDB,
+        -0.05em -0.05em #FCFFDB,
+        -0.05em 0.05em #FCFFDB,
+        0.05em -0.05em #FCFFDB,
+        0.05em 0.05em #FCFFDB;
 }
 /*
 @media screen and (min-width: 768px) {
