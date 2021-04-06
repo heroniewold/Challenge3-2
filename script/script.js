@@ -32,10 +32,10 @@ map.on('style.load', function() {
         .then(function(response) {
             console.log(response.water);
             if (response.water == true) {
-                document.getElementById("onwater").innerHTML = "statement is true";
+                document.getElementById("onwater").innerHTML = "Coordinates are located on a body of water";
             }
             else if (response.water == false) {
-                document.getElementById("onwater").innerHTML = "statement is false";
+                document.getElementById("onwater").innerHTML = "Coordinates are located on the land";
             }
         })    
     });
