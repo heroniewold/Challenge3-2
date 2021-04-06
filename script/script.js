@@ -18,8 +18,8 @@ map.on('style.load', function() {
             .setHTML('Pizza')
            // .setHTML('Possible landing place coordinates: <br/>' + 'Latitude' + ' ' + '\"' + coordinates.lat + '\" <br/>' + 'Longitude' + ' ' + '\"' + coordinates.lng + '\"')
             .addTo(map);
-        //PROBEER VOLGENDE KEER DE TEXT OP DE POPUP TE KRIJGEN DOOR DE VAR ONWATER BOVEN DE SETHTML TE DOEN
-        // make text show on land or on water
+        
+        // code to make text show under map
         var onWaterUrl = 'https://api.onwater.io/api/v1/results/' + coordinates.lat + ',' + coordinates.lng + '?access_token=A8ekD6ka1XKuFYxvNZ2Y';
     
         fetch(onWaterUrl)
@@ -40,6 +40,17 @@ map.on('style.load', function() {
     });
 });
 
+var nasaapod = 'https://api.nasa.gov/planetary/apod?api_key=5cwcboc56Nc7mkgzfRKbCF2CUSvSS8EKEcejN2b3';
 
 
 
+fetch(nasaapod)
+    
+        .then(function(response) {
+            return response.json();
+        })
+    
+        .then(function(response) {
+            console.log(response);
+            document.body.style.backgroundImage = response.url;
+        })

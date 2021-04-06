@@ -1,7 +1,7 @@
 body {
-  margin: 5vh 5vw;
+  margin: 0;
 }
 #landingmap {
-  height: 90vh;
-  width: 90vw;
+    width: 50vw;
+    height: 50vh;
 }
